@@ -3,7 +3,7 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 
-import { ToggleGroup } from "@/components/ui/button2"
+import { Button3Group } from "@/components/ui/button3"
 
 const themeOptions = [
   { label: "Green", value: "terminal-green" },
@@ -23,8 +23,8 @@ export function ThemeSwitcher() {
   const selectedTheme = mounted ? theme : undefined
 
   return (
-    <ToggleGroup
-      className="rounded-lg border border-border/70 bg-background/70 p-1"
+    <Button3Group
+      className="rounded-lg border border-border/70"
       options={themeOptions.map((option) => ({
         label: option.label,
         value: option.value,
