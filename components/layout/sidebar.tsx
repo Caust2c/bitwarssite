@@ -36,7 +36,7 @@ export function Sidebar({
   }
 
   return (
-    <aside className="flex h-full flex-col border-r border-border/60 bg-background/25 backdrop-blur-[2px]">
+    <aside className="flex h-full flex-col border-r border-border/60 bg-accent/12 backdrop-blur-[2px]">
       <div className="shrink-0 p-4 pb-2 md:p-5 md:pb-2">
         <h2 className="text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
           Table of Contents

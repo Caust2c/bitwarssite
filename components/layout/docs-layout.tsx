@@ -32,7 +32,7 @@ export function DocsLayout({
 
   return (
     <DocsContainer>
-      <div className="relative z-40 shrink-0 border-b border-border/60 bg-background/45 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
+      <div className="relative z-40 shrink-0 border-b border-border/60 bg-accent/12 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
         <div className="flex flex-wrap items-center gap-3">
           <p className="mr-2 shrink-0 text-base font-bold tracking-wide sm:text-lg">
             Tech Deck
