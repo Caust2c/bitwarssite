@@ -32,12 +32,12 @@ export function DocsLayout({
 
   return (
     <DocsContainer>
-      <div className="shrink-0 border-b border-border/60 bg-background/45 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
+      <div className="relative z-40 shrink-0 border-b border-border/60 bg-background/45 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
         <div className="flex flex-wrap items-center gap-3">
           <p className="mr-2 shrink-0 text-base font-bold tracking-wide sm:text-lg">
-            PC Hardware Glossary
+            Tech Deck
           </p>
-          <div className="relative min-w-[220px] flex-1">
+          <div className="relative z-50 min-w-[220px] flex-1">
             <Search className="pointer-events-none absolute top-1/2 left-3 size-4 -translate-y-1/2 text-muted-foreground" />
             <Input
               placeholder="Search CPU core, tensor core, DDR5..."
@@ -46,7 +46,7 @@ export function DocsLayout({
               className="h-9 border-border/60 bg-background/60 pl-9 font-mono"
             />
             {hasQuery && (
-              <div className="absolute z-30 mt-1 w-full overflow-hidden rounded-md border border-border/60 bg-background/95 backdrop-blur-sm">
+              <div className="absolute z-[70] mt-1 w-full overflow-hidden rounded-md border border-border/60 bg-background/95 backdrop-blur-sm">
                 {searchResults.length > 0 ? (
                   <ul className="themed-scrollbar max-h-72 overflow-auto py-1">
                     {searchResults.map((topic) => (
@@ -75,7 +75,7 @@ export function DocsLayout({
         </div>
       </div>
 
-      <div className="grid min-h-0 flex-1 grid-cols-1 md:grid-cols-[300px_1fr]">
+      <div className="relative z-0 grid min-h-0 flex-1 grid-cols-1 md:grid-cols-[300px_1fr]">
         <Sidebar
           categories={categories}
           selectedTopic={selectedTopic}
