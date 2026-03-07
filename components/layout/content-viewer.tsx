@@ -3,9 +3,21 @@ import { motion } from "framer-motion"
 import type { Topic } from "@/lib/hardware-topics"
 import { TopicSection } from "@/components/docs/topic-section"
 
-export function ContentViewer({ topic }: { topic: Topic }) {
+type ContentViewerProps = {
+  topic: Topic
+  previousTopic?: Topic | null
+  nextTopic?: Topic | null
+  onNavigate?: (topicId: string) => void
+}
+
+export function ContentViewer({
+  topic,
+  previousTopic,
+  nextTopic,
+  onNavigate,
+}: ContentViewerProps) {
   return (
-    <section className="flex min-h-[680px] items-start justify-start p-6 md:p-9">
+    <section className="themed-scrollbar flex h-full flex-col overflow-y-auto p-6 md:p-9">
       <motion.div
         className="w-full"
         key={topic.id}
@@ -13,7 +25,12 @@ export function ContentViewer({ topic }: { topic: Topic }) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.18, ease: "easeOut" }}
       >
-        <TopicSection topic={topic} />
+        <TopicSection
+          topic={topic}
+          previousTopic={previousTopic}
+          nextTopic={nextTopic}
+          onNavigate={onNavigate}
+        />
       </motion.div>
     </section>
   )

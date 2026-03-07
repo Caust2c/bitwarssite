@@ -32,7 +32,7 @@ export function DocsLayout({
 
   return (
     <DocsContainer>
-      <div className="border-b border-border/60 bg-background/45 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
+      <div className="shrink-0 border-b border-border/60 bg-background/45 px-4 py-3 sm:px-5 md:px-6 backdrop-blur-sm">
         <div className="flex flex-wrap items-center gap-3">
           <p className="mr-2 shrink-0 text-base font-bold tracking-wide sm:text-lg">
             PC Hardware Glossary
@@ -48,7 +48,7 @@ export function DocsLayout({
             {hasQuery && (
               <div className="absolute z-30 mt-1 w-full overflow-hidden rounded-md border border-border/60 bg-background/95 backdrop-blur-sm">
                 {searchResults.length > 0 ? (
-                  <ul className="max-h-72 overflow-auto py-1">
+                  <ul className="themed-scrollbar max-h-72 overflow-auto py-1">
                     {searchResults.map((topic) => (
                       <li key={topic.id}>
                         <button
@@ -75,13 +75,13 @@ export function DocsLayout({
         </div>
       </div>
 
-      <div className="grid min-h-[calc(100vh-220px)] grid-cols-1 md:grid-cols-[300px_1fr]">
+      <div className="grid min-h-0 flex-1 grid-cols-1 md:grid-cols-[300px_1fr]">
         <Sidebar
           categories={categories}
           selectedTopic={selectedTopic}
           onSelectTopic={onSelectTopic}
         />
-        <main className="min-w-0">{children}</main>
+        <main className="themed-scrollbar min-h-0 min-w-0 overflow-y-auto">{children}</main>
       </div>
     </DocsContainer>
   )

@@ -52,6 +52,22 @@ export function HardwarePage() {
 
   const selected = topicsById[selectedTopic] ?? topicsById[defaultTopicId]
 
+  // Compute ordered list of all subsections (excluding readme) for prev/next navigation
+  const orderedSubsections = React.useMemo(
+    () =>
+      topicCategories
+        .filter((category) => category.id !== "readme")
+        .flatMap((category) => category.topics),
+    []
+  )
+
+  const selectedIndex = orderedSubsections.findIndex((t) => t.id === selected.id)
+  const previousTopic = selectedIndex > 0 ? orderedSubsections[selectedIndex - 1] : null
+  const nextTopic =
+    selectedIndex >= 0 && selectedIndex < orderedSubsections.length - 1
+      ? orderedSubsections[selectedIndex + 1]
+      : null
+
   return (
     <DocsLayout
       categories={filteredCategories}
@@ -62,7 +78,12 @@ export function HardwarePage() {
       searchResults={searchResults.slice(0, 12)}
       onOpenTopicFromSearch={openTopic}
     >
-      <ContentViewer topic={selected} />
+      <ContentViewer
+        topic={selected}
+        previousTopic={previousTopic}
+        nextTopic={nextTopic}
+        onNavigate={openTopic}
+      />
     </DocsLayout>
   )
 }

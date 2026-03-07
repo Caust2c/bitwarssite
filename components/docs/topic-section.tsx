@@ -1,3 +1,6 @@
+import Image from "next/image"
+import { ChevronLeft, ChevronRight } from "lucide-react"
+
 import type { Topic } from "@/lib/hardware-topics"
 
 const ASCII_HEADER = `████████╗███████╗ ██████╗██╗  ██╗    ██████╗ ███████╗ ██████╗██╗  ██╗ 
@@ -7,7 +10,19 @@ const ASCII_HEADER = `████████╗███████╗ ██
    ██║   ███████╗╚██████╗██║  ██║    ██████╔╝███████╗╚██████╗██║  ██╗
    ╚═╝   ╚══════╝ ╚═════╝╚═╝  ╚═╝    ╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝`
 
-export function TopicSection({ topic }: { topic: Topic }) {
+type TopicSectionProps = {
+  topic: Topic
+  previousTopic?: Topic | null
+  nextTopic?: Topic | null
+  onNavigate?: (topicId: string) => void
+}
+
+export function TopicSection({
+  topic,
+  previousTopic,
+  nextTopic,
+  onNavigate,
+}: TopicSectionProps) {
   const isReadme = topic.id === "readme"
 
   return (
@@ -26,12 +41,36 @@ export function TopicSection({ topic }: { topic: Topic }) {
         )}
       </header>
 
-      <section className="w-full max-h-[70vh] space-y-4 overflow-y-auto px-8 py-7 sm:px-9 sm:py-8">
+      <section className="w-full space-y-4 px-1">
         {topic.paragraphs.map((paragraph) => (
           <p key={paragraph} className="text-base leading-8 text-foreground/90">
             {paragraph}
           </p>
         ))}
+
+        {/* Render images if present */}
+        {topic.images && topic.images.length > 0 && (
+          <div className="mt-6 space-y-4">
+            {topic.images.map((image) => (
+              <figure key={image.src} className="space-y-2">
+                <div className="relative w-full overflow-hidden rounded-lg border border-border/60">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={800}
+                    height={450}
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+                {image.caption && (
+                  <figcaption className="text-center text-sm text-muted-foreground">
+                    {image.caption}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        )}
 
         {!isReadme && (
           <p className="text-sm text-muted-foreground">
@@ -39,6 +78,36 @@ export function TopicSection({ topic }: { topic: Topic }) {
           </p>
         )}
       </section>
+
+      {/* Previous / Next Navigation */}
+      {!isReadme && onNavigate && (previousTopic || nextTopic) && (
+        <nav className="flex w-full items-center justify-between border-t border-border/40 pt-6">
+          {previousTopic ? (
+            <button
+              type="button"
+              onClick={() => onNavigate(previousTopic.id)}
+              className="flex items-center gap-2 rounded-md border border-border/60 px-4 py-2 text-sm font-medium transition-colors duration-200 hover:bg-accent/10"
+            >
+              <ChevronLeft className="size-4" />
+              <span>{previousTopic.label}</span>
+            </button>
+          ) : (
+            <div />
+          )}
+          {nextTopic ? (
+            <button
+              type="button"
+              onClick={() => onNavigate(nextTopic.id)}
+              className="flex items-center gap-2 rounded-md border border-border/60 px-4 py-2 text-sm font-medium transition-colors duration-200 hover:bg-accent/10"
+            >
+              <span>{nextTopic.label}</span>
+              <ChevronRight className="size-4" />
+            </button>
+          ) : (
+            <div />
+          )}
+        </nav>
+      )}
     </article>
   )
 }
