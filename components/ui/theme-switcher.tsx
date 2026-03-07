@@ -3,9 +3,7 @@
 import * as React from "react"
 import { useTheme } from "next-themes"
 
-import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
-import { cn } from "@/lib/utils"
+import { ToggleGroup } from "@/components/ui/button2"
 
 const themeOptions = [
   { label: "Green", value: "terminal-green" },
@@ -22,26 +20,18 @@ export function ThemeSwitcher() {
     setMounted(true)
   }, [])
 
-  return (
-    <ButtonGroup className="rounded-lg border border-border/70 bg-background/70 p-1">
-      {themeOptions.map((option) => {
-        const isActive = mounted && theme === option.value
+  const selectedTheme = mounted ? theme : undefined
 
-        return (
-          <Button
-            key={option.value}
-            size="sm"
-            variant={isActive ? "default" : "ghost"}
-            className={cn(
-              "font-mono text-xs",
-              isActive && "bg-primary text-primary-foreground"
-            )}
-            onClick={() => setTheme(option.value)}
-          >
-            {option.label}
-          </Button>
-        )
-      })}
-    </ButtonGroup>
+  return (
+    <ToggleGroup
+      className="rounded-lg border border-border/70 bg-background/70 p-1"
+      options={themeOptions.map((option) => ({
+        label: option.label,
+        value: option.value,
+      }))}
+      value={selectedTheme}
+      defaultValue="terminal-green"
+      onValueChange={(value) => setTheme(value)}
+    />
   )
 }
