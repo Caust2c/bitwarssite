@@ -34,7 +34,7 @@ export function ThemeSwitcher() {
             variant={isActive ? "default" : "ghost"}
             className={cn(
               "font-mono text-xs",
-              isActive && "terminal-glow bg-primary text-primary-foreground"
+              isActive && "bg-primary text-primary-foreground"
             )}
             onClick={() => setTheme(option.value)}
           >

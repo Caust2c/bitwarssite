@@ -1,5 +1,5 @@
-import { GlossaryPage } from "@/components/docs/glossary-page"
+import { HardwarePage } from "@/components/docs/hardware-page"
 
 export default function HomePage() {
-  return <GlossaryPage />
+  return <HardwarePage />
 }

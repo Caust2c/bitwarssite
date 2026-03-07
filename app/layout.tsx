@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { JetBrains_Mono } from "next/font/google";
+import { Space_Mono } from "next/font/google";
 
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import "./globals.css";
 
-const jetBrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
+const spaceMono = Space_Mono({
+  variable: "--font-space-mono",
   subsets: ["latin"],
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${jetBrainsMono.variable} antialiased`}>
+      <body className={`${spaceMono.variable} antialiased`}>
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="terminal-green"
