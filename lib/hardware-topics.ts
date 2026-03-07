@@ -21,7 +21,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "readme",
         label: "README",
-        title: "PC HARDWARE GLOSSARY",
+        title: "TECH DECK",
         paragraphs: [
           "An interactive knowledge base explaining CPUs, GPUs, RAM, motherboards, and other PC hardware concepts.",
           "Use the sidebar to browse topics and the search bar to instantly jump to any glossary entry.",
@@ -37,7 +37,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-overview",
         label: "1.1 Overview",
-        title: "CPU 1.1 Overview",
+        title: "1.1 Overview",
         paragraphs: [
           "The Central Processing Unit (CPU) is the primary processor of a computer and is often referred to as the brain of the system.",
           "It executes instructions from software, performs calculations, and coordinates the actions of all other hardware components.",
@@ -56,7 +56,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-purpose",
         label: "1.2 Purpose",
-        title: "CPU 1.2 Purpose",
+        title: "1.2 Purpose",
         paragraphs: [
           "The CPU’s primary role is to interpret and execute program instructions.",
           "Its responsibilities include: performing mathematical calculations, executing program logic, managing data flow between RAM and storage, coordinating hardware components, and handling system interrupts and background tasks.",
@@ -68,7 +68,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-architecture",
         label: "1.3 Architecture",
-        title: "CPU 1.3 Architecture",
+        title: "1.3 Architecture",
         paragraphs: [
           "A CPU is composed of several internal components that work together to process instructions efficiently.",
           "Core: an independent processing unit capable of executing instructions. Modern CPUs often have 4–32+ cores.",
@@ -82,18 +82,25 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-specifications",
         label: "1.4 Specifications",
-        title: "CPU 1.4 Specifications",
+        title: "1.4 Specifications",
         paragraphs: [
           "Key specifications determine CPU performance.",
           "Specification meanings: Core Count (number of processing units), Thread Count (parallel tasks CPU can manage), Clock Speed (processing frequency), Cache Size (internal fast memory), TDP (Thermal Design Power / heat output), Instruction Set (supported CPU instructions).",
           "Example modern CPU specs: Ryzen 7 7800X3D — 8 cores, 16 threads, 4.2 GHz base clock. Intel i7-13700K — 16 cores, 24 threads, 3.4 GHz base clock.",
         ],
         keywords: ["specifications", "core count", "thread count", "tdp", "instruction set"],
+        images: [
+          {
+            src: "/assets/Pasted image (2).png",
+            alt: "CPU Architecture Diagram",
+            caption: "Figure 2: CPU instruction cycle and pipeline stages",
+          },
+        ],
       },
       {
         id: "cpu-performance",
         label: "1.5 Performance",
-        title: "CPU 1.5 Performance",
+        title: "1.5 Performance",
         paragraphs: [
           "CPU performance depends on several factors.",
           "Single-core performance is important for gaming, older software, and real-time applications.",
@@ -105,7 +112,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-use-cases",
         label: "1.6 Use Cases",
-        title: "CPU 1.6 Use Cases",
+        title: "1.6 Use Cases",
         paragraphs: [
           "Different workloads require different CPU characteristics.",
           "Gaming: high single-core performance.",
@@ -119,7 +126,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-compatibility",
         label: "1.7 Compatibility",
-        title: "CPU 1.7 Compatibility",
+        title: "1.7 Compatibility",
         paragraphs: [
           "CPUs must be compatible with several system components.",
           "Motherboard socket: different CPUs require different sockets (examples: Intel LGA1700, AMD AM5).",
@@ -132,7 +139,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-evolution",
         label: "1.8 Evolution",
-        title: "CPU 1.8 Evolution",
+        title: "1.8 Evolution",
         paragraphs: [
           "CPU technology has evolved dramatically.",
           "Early CPUs (1970s–1980s): single-core processors such as Intel 4004.",
@@ -144,7 +151,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-comparisons",
         label: "1.9 Comparisons",
-        title: "CPU 1.9 Comparisons",
+        title: "1.9 Comparisons",
         paragraphs: [
           "Intel vs AMD comparison: gaming (Intel traditionally strong, AMD competitive), multicore workloads (both strong, AMD often stronger), power efficiency (varies by generation).",
           "Desktop vs laptop CPUs: desktop CPUs typically offer higher power and performance, while laptop CPUs prioritize lower power and portability.",
@@ -154,7 +161,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-optimization",
         label: "1.10 Optimization",
-        title: "CPU 1.10 Optimization",
+        title: "1.10 Optimization",
         paragraphs: [
           "Best practices when choosing and tuning a CPU.",
           "Gaming: focus on high clock speeds and strong single-thread performance.",
@@ -167,7 +174,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-limitations",
         label: "1.11 Limitations",
-        title: "CPU 1.11 Limitations",
+        title: "1.11 Limitations",
         paragraphs: [
           "Even powerful CPUs can face limitations.",
           "Bottlenecks: a CPU bottleneck occurs when the processor cannot keep up with other hardware like GPUs.",
@@ -179,7 +186,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-troubleshooting",
         label: "1.12 Troubleshooting",
-        title: "CPU 1.12 Troubleshooting",
+        title: "1.12 Troubleshooting",
         paragraphs: [
           "PC won’t boot: possible causes include incompatible CPU or outdated motherboard BIOS.",
           "High temperatures: check thermal paste, cooler installation, and airflow.",
@@ -190,7 +197,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-fun-facts",
         label: "1.13 Fun Facts",
-        title: "CPU 1.13 Fun Facts",
+        title: "1.13 Fun Facts",
         paragraphs: [
           "The Intel 4004 (1971) was the first commercially available microprocessor.",
           "Modern CPUs contain billions of transistors.",
@@ -202,7 +209,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "cpu-summary",
         label: "1.14 Summary",
-        title: "CPU 1.14 Summary",
+        title: "1.14 Summary",
         paragraphs: [
           "CPU (Central Processing Unit): executes instructions and processes data, coordinates all computer hardware, and drives system responsiveness.",
           "Performance depends on cores, clock speed, cache, and IPC.",
@@ -220,7 +227,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-overview",
         label: "2.1 Overview",
-        title: "GPU 2.1 Overview",
+        title: "2.1 Overview",
         paragraphs: [
           "A Graphics Processing Unit (GPU) is a specialized processor designed to handle highly parallel workloads, especially graphics rendering and large-scale mathematical computations.",
           "Originally built for 3D graphics, modern GPUs are widely used in AI, machine learning, scientific simulations, video rendering, cryptocurrency mining, and data processing.",
@@ -228,11 +235,18 @@ export const topicCategories: TopicCategory[] = [
           "This architecture makes GPUs highly efficient for matrix operations and vector calculations.",
         ],
         keywords: ["gpu", "overview", "parallelism", "graphics", "ai"],
+        images: [
+          {
+            src: "/assets/Pasted image (3).png",
+            alt: "GPU Architecture Diagram",
+            caption: "Figure 1: Basic GPU architecture showing streaming multiprocessors and memory hierarchy",
+          },
+        ],
       },
       {
         id: "gpu-purpose",
         label: "2.2 Purpose",
-        title: "GPU 2.2 Purpose",
+        title: "2.2 Purpose",
         paragraphs: [
           "The GPU’s primary role is to accelerate graphical and parallel computations.",
           "Responsibilities include rendering 2D/3D graphics, processing large numbers of pixels, running AI training workloads, accelerating video encoding/decoding, and executing parallel mathematical operations.",
@@ -243,7 +257,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-architecture",
         label: "2.3 Architecture",
-        title: "GPU 2.3 Architecture",
+        title: "2.3 Architecture",
         paragraphs: [
           "A GPU includes specialized components designed for parallel workloads.",
           "Streaming Multiprocessors (SMs) / Compute Units: GPU clusters containing many execution cores.",
@@ -258,17 +272,24 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-specifications",
         label: "2.4 Specifications",
-        title: "GPU 2.4 Specifications",
+        title: "2.4 Specifications",
         paragraphs: [
           "GPU performance is determined by core count, VRAM size, memory bandwidth, boost clock, TDP, and ray tracing units.",
           "Example specs: RTX 4090 — 16384 cores, 24GB VRAM, ~2.5 GHz boost clock. RX 7900 XTX — 6144 cores, 24GB VRAM, ~2.3 GHz boost clock.",
         ],
         keywords: ["specifications", "vram", "bandwidth", "boost clock", "tdp"],
+        images: [
+          {
+            src: "/assets/Pasted image (4).png",
+            alt: "GPU Architecture Diagram",
+            caption: "Figure 4: Basic GPU memory management and hierarchy",
+          },
+        ],
       },
       {
         id: "gpu-performance",
         label: "2.5 Performance",
-        title: "GPU 2.5 Performance",
+        title: "2.5 Performance",
         paragraphs: [
           "GPU performance depends on core count, memory bandwidth, clock speed, and architecture efficiency.",
           "More cores enable more parallel operations for graphics and compute workloads.",
@@ -281,7 +302,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-use-cases",
         label: "2.6 Use Cases",
-        title: "GPU 2.6 Use Cases",
+        title: "2.6 Use Cases",
         paragraphs: [
           "GPUs are essential for gaming, video editing, AI and machine learning, 3D rendering, and scientific computing.",
           "Application mapping: gaming (real-time rendering), video editing (effects and encoding), AI/ML (neural network training), 3D rendering (scene rendering), scientific computing (parallel simulations).",
@@ -291,7 +312,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-compatibility",
         label: "2.7 Compatibility",
-        title: "GPU 2.7 Compatibility",
+        title: "2.7 Compatibility",
         paragraphs: [
           "GPU compatibility depends on PCI Express interface, power requirements, and physical clearance.",
           "PCIe bandwidth examples: PCIe 3.0 ~32 GB/s, PCIe 4.0 ~64 GB/s, PCIe 5.0 ~128 GB/s.",
@@ -303,7 +324,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-evolution",
         label: "2.8 Evolution",
-        title: "GPU 2.8 Evolution",
+        title: "2.8 Evolution",
         paragraphs: [
           "GPU technology has evolved from fixed-function graphics hardware to highly programmable compute accelerators.",
           "Fixed-function GPUs (1990s): early basic graphics acceleration.",
@@ -316,7 +337,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-comparisons",
         label: "2.9 Comparisons",
-        title: "GPU 2.9 Comparisons",
+        title: "2.9 Comparisons",
         paragraphs: [
           "Integrated vs dedicated GPUs: integrated GPUs are built into CPUs with lower power and lower graphics capability; dedicated GPUs are separate hardware with much higher performance.",
           "NVIDIA vs AMD: NVIDIA is often strong in ray tracing and tensor-core AI features, while AMD is often competitive on price/performance.",
@@ -326,7 +347,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-optimization",
         label: "2.10 Optimization",
-        title: "GPU 2.10 Optimization",
+        title: "2.10 Optimization",
         paragraphs: [
           "To maximize GPU performance: keep drivers updated, maintain proper cooling, tune graphics settings, and monitor VRAM usage.",
           "Running out of VRAM can cause major performance drops.",
@@ -336,7 +357,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-limitations",
         label: "2.11 Limitations",
-        title: "GPU 2.11 Limitations",
+        title: "2.11 Limitations",
         paragraphs: [
           "Despite high performance, GPUs have limits in power consumption, heat output, cost, and software optimization.",
           "High-end GPUs can consume 300–450W and require strong cooling.",
@@ -347,7 +368,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-troubleshooting",
         label: "2.12 Troubleshooting",
-        title: "GPU 2.12 Troubleshooting",
+        title: "2.12 Troubleshooting",
         paragraphs: [
           "GPU not detected: possible causes include improper PCIe installation, missing drivers, or BIOS settings.",
           "Screen artifacts: commonly caused by overheating, VRAM issues, or unstable overclocks.",
@@ -358,7 +379,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-fun-facts",
         label: "2.13 Fun Facts",
-        title: "GPU 2.13 Fun Facts",
+        title: "2.13 Fun Facts",
         paragraphs: [
           "The first GPU was the NVIDIA GeForce 256 (1999).",
           "Modern GPUs contain tens of billions of transistors.",
@@ -370,7 +391,7 @@ export const topicCategories: TopicCategory[] = [
       {
         id: "gpu-summary",
         label: "2.14 Summary",
-        title: "GPU 2.14 Summary",
+        title: "2.14 Summary",
         paragraphs: [
           "GPU (Graphics Processing Unit): specialized processor for graphics and parallel workloads.",
           "GPUs contain thousands of small cores optimized for parallel computation.",
