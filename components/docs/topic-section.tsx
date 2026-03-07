@@ -1,7 +1,7 @@
-import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 
 import type { Topic } from "@/lib/hardware-topics"
+import { Card1 } from "@/components/ui/card1"
 
 const ASCII_HEADER = `████████╗███████╗ ██████╗██╗  ██╗    ██████╗ ███████╗ ██████╗██╗  ██╗ 
 ╚══██╔══╝██╔════╝██╔════╝██║  ██║    ██╔══██╗██╔════╝██╔════╝██║ ██╔╝
@@ -52,22 +52,12 @@ export function TopicSection({
         {topic.images && topic.images.length > 0 && (
           <div className="mt-6 space-y-4">
             {topic.images.map((image) => (
-              <figure key={image.src} className="space-y-2">
-                <div className="relative w-full overflow-hidden rounded-lg border border-border/60">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={800}
-                    height={450}
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
-                {image.caption && (
-                  <figcaption className="text-center text-sm text-muted-foreground">
-                    {image.caption}
-                  </figcaption>
-                )}
-              </figure>
+              <Card1
+                key={image.src}
+                src={image.src}
+                alt={image.alt}
+                caption={image.caption}
+              />
             ))}
           </div>
         )}
