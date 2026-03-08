@@ -32,7 +32,7 @@ export function Sidebar({
   }
 
   return (
-    <aside className="flex h-full flex-col border-r border-border/60 bg-accent/12 backdrop-blur-[2px]">
+    <aside className="flex h-full min-h-0 flex-col overflow-hidden border-r border-border/60 bg-accent/12 backdrop-blur-[2px]">
       <div className="shrink-0 p-4 pb-2 md:p-5 md:pb-2">
         <h2 className="text-xs font-semibold tracking-[0.2em] text-muted-foreground uppercase">
           Table of Contents
@@ -40,7 +40,7 @@ export function Sidebar({
       </div>
 
       {categories.length > 0 ? (
-        <nav className="themed-scrollbar min-h-0 flex-1 space-y-2.5 overflow-y-auto px-4 pb-4 md:px-5 md:pb-5">
+        <nav className="min-h-0 flex-1 space-y-2.5 overflow-y-auto px-4 pb-4 md:px-5 md:pb-5" style={{ scrollbarWidth: 'thin', scrollbarColor: 'var(--scrollbar-thumb) var(--scrollbar-track)' }}>
           {categories.map((category) => (
             <div key={category.id} className="w-full min-w-0">
               <CategoryItem

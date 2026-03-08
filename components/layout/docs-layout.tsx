@@ -55,7 +55,7 @@ export function DocsLayout({
         </div>
       </div>
 
-      <div className="relative z-0 grid min-h-0 flex-1 grid-cols-1 md:grid-cols-[300px_1fr]">
+      <div className="relative z-0 grid min-h-0 flex-1 grid-cols-1 grid-rows-[minmax(0,2fr)_minmax(0,3fr)] md:grid-cols-[300px_1fr] md:grid-rows-[1fr]">
         <Sidebar
           categories={categories}
           selectedTopic={selectedTopic}
