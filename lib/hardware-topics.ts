@@ -47,7 +47,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["cpu", "overview", "processor", "brain", "instructions"],
         images: [
           {
-            src: "/assets/Pasted image.png",
+            src: "/assets/Pasted image (1).png",
             alt: "CPU Architecture Diagram",
             caption: "Figure 1: Basic CPU architecture showing cores and cache hierarchy",
           },
@@ -78,6 +78,13 @@ export const topicCategories: TopicCategory[] = [
           "Instruction pipeline: modern CPUs process instructions in stages—Fetch, Decode, Execute, Memory access, and Write-back.",
         ],
         keywords: ["architecture", "core", "thread", "cache", "clock speed", "pipeline"],
+        images: [
+          {
+            src: "/assets/Pasted image (2).png",
+            alt: "CPU Architecture Diagram",
+            caption: "Figure 2: CPU instruction cycle and pipeline stages",
+          },
+        ],
       },
       {
         id: "cpu-specifications",
@@ -88,14 +95,7 @@ export const topicCategories: TopicCategory[] = [
           "Specification meanings: Core Count (number of processing units), Thread Count (parallel tasks CPU can manage), Clock Speed (processing frequency), Cache Size (internal fast memory), TDP (Thermal Design Power / heat output), Instruction Set (supported CPU instructions).",
           "Example modern CPU specs: Ryzen 7 7800X3D — 8 cores, 16 threads, 4.2 GHz base clock. Intel i7-13700K — 16 cores, 24 threads, 3.4 GHz base clock.",
         ],
-        keywords: ["specifications", "core count", "thread count", "tdp", "instruction set"],
-        images: [
-          {
-            src: "/assets/Pasted image (2).png",
-            alt: "CPU Architecture Diagram",
-            caption: "Figure 2: CPU instruction cycle and pipeline stages",
-          },
-        ],
+        keywords: ["specifications", "core count", "thread count", "tdp", "instruction set"]
       },
       {
         id: "cpu-performance",
@@ -268,6 +268,13 @@ export const topicCategories: TopicCategory[] = [
           "Ray tracing cores: dedicated hardware for realistic lighting and reflections.",
         ],
         keywords: ["architecture", "sm", "cuda cores", "vram", "tensor cores", "ray tracing"],
+        images: [
+          {
+            src: "/assets/Pasted image (4).png",
+            alt: "GPU Architecture Diagram",
+            caption: "Figure 2: Basic GPU memory management and hierarchy",
+          },
+        ],
       },
       {
         id: "gpu-specifications",
@@ -277,14 +284,7 @@ export const topicCategories: TopicCategory[] = [
           "GPU performance is determined by core count, VRAM size, memory bandwidth, boost clock, TDP, and ray tracing units.",
           "Example specs: RTX 4090 — 16384 cores, 24GB VRAM, ~2.5 GHz boost clock. RX 7900 XTX — 6144 cores, 24GB VRAM, ~2.3 GHz boost clock.",
         ],
-        keywords: ["specifications", "vram", "bandwidth", "boost clock", "tdp"],
-        images: [
-          {
-            src: "/assets/Pasted image (4).png",
-            alt: "GPU Architecture Diagram",
-            caption: "Figure 4: Basic GPU memory management and hierarchy",
-          },
-        ],
+        keywords: ["specifications", "vram", "bandwidth", "boost clock", "tdp"]
       },
       {
         id: "gpu-performance",
@@ -417,6 +417,13 @@ export const topicCategories: TopicCategory[] = [
           "RAM is essential for active workloads such as running applications and multitasking smoothly.",
         ],
         keywords: ["ram", "overview", "volatile", "temporary memory", "multitasking"],
+        images: [
+          {
+            src: "/assets/Pasted image (5).png",
+            alt: "RAM Modules",
+            caption: "Figure 1: Various RAM modules of different capacities",
+          },
+        ],
       },
       {
         id: "ram-purpose",
@@ -441,6 +448,13 @@ export const topicCategories: TopicCategory[] = [
           "RAM modules are installed as DIMMs on motherboards, including UDIMM (desktop) and SO-DIMM (laptop) formats.",
         ],
         keywords: ["architecture", "memory cells", "dual channel", "memory controller", "dimm"],
+        images: [
+          {
+            src: "/assets/Pasted image (6).png",
+            alt: "DRAM Cell Architecture",
+            caption: "Figure 2: Internal architecture of an 8F2 DRAM cell",
+          },
+        ],
       },
       {
         id: "ram-specifications",
@@ -584,6 +598,13 @@ export const topicCategories: TopicCategory[] = [
           "Because of this, the motherboard strongly influences compatibility, expansion, and connectivity.",
         ],
         keywords: ["motherboard", "overview", "mainboard", "bios", "uefi"],
+        images: [
+          {
+            src: "/assets/Pasted image (7).png",
+            alt: "Motherboard Chip",
+            caption: "Figure 1: A typical motherboard chip",
+          },
+        ],
       },
       {
         id: "motherboard-purpose",
@@ -608,6 +629,13 @@ export const topicCategories: TopicCategory[] = [
           "Expansion slots include PCIe x16 for GPUs and PCIe x4/x1 for additional cards.",
         ],
         keywords: ["architecture", "chipset", "socket", "dimm", "pcie"],
+        images: [
+          {
+            src: "/assets/Pasted image (8).png",
+            alt: "Motherboard Components",
+            caption: "Figure 2: An image showing internal motherboard components",
+          },
+        ],
       },
       {
         id: "motherboard-specifications",
@@ -745,6 +773,13 @@ export const topicCategories: TopicCategory[] = [
           "Storage performance strongly affects boot times, application loading, and file transfer speed.",
         ],
         keywords: ["storage", "overview", "ssd", "hdd", "permanent data"],
+        images: [
+          {
+            src: "/assets/Pasted image (9).png",
+            alt: "Memory Heirarchy",
+            caption: "Figure 1: The computer memory heirarchy diagram",
+          },
+        ],
       },
       {
         id: "storage-purpose",
@@ -767,6 +802,13 @@ export const topicCategories: TopicCategory[] = [
           "NVMe SSDs connect through PCIe for high bandwidth and low latency.",
         ],
         keywords: ["architecture", "hdd", "ssd", "nand", "nvme"],
+        images: [
+          {
+            src: "/assets/Pasted image (10).png",
+            alt: "Hard Drive",
+            caption: "Figure 2: Internal components of a typical hard drive",
+          },
+        ],
       },
       {
         id: "storage-specifications",
@@ -903,6 +945,13 @@ export const topicCategories: TopicCategory[] = [
           "Networking is typically provided by integrated or add-in NIC hardware through Ethernet, Wi-Fi, Bluetooth, and enterprise fiber links.",
         ],
         keywords: ["networking", "overview", "ethernet", "wifi", "nic"],
+        images: [
+          {
+            src: "/assets/Pasted image (11).png",
+            alt: "Network Topologies",
+            caption: "Figure 1: A diagram showing various network topologies",
+          },
+        ],
       },
       {
         id: "networking-purpose",
@@ -925,6 +974,13 @@ export const topicCategories: TopicCategory[] = [
           "Each NIC has a MAC address used for local network identification.",
         ],
         keywords: ["architecture", "osi", "tcp/ip", "nic", "mac address"],
+        images: [
+          {
+            src: "/assets/Pasted image (12).png",
+            alt: "OSI Model",
+            caption: "Figure 2: A diagram showing the various layers of the OSI model",
+          },
+        ],
       },
       {
         id: "networking-specifications",
