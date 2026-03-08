@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { Users } from "lucide-react"
 
 import { Accordion1 } from "@/components/ui/accordion1"
 import { SidebarItem } from "@/components/ui/sidebar-item"
@@ -57,6 +58,21 @@ export function Sidebar({
           No topics match the current search.
         </p>
       )}
+
+      {/* Contributors section at the bottom */}
+      <div className="shrink-0 border-t border-border/60 px-4 py-3 md:px-5">
+        <button
+          onClick={() => onSelectTopic("contributors")}
+          className={`flex w-full items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+            selectedTopic === "contributors"
+              ? "bg-accent/20 text-foreground"
+              : "text-muted-foreground hover:bg-accent/10 hover:text-foreground"
+          }`}
+        >
+          <Users className="h-4 w-4" />
+          Contributors
+        </button>
+      </div>
     </aside>
   )
 }

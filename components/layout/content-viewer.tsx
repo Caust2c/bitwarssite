@@ -1,3 +1,6 @@
+"use client"
+
+import * as React from "react"
 import { motion } from "framer-motion"
 
 import type { Topic } from "@/lib/hardware-topics"
@@ -16,8 +19,16 @@ export function ContentViewer({
   nextTopic,
   onNavigate,
 }: ContentViewerProps) {
+  // Scroll to top when topic changes
+  React.useEffect(() => {
+    const mainContent = document.getElementById("main-content")
+    if (mainContent) {
+      mainContent.scrollTop = 0
+    }
+  }, [topic.id])
+
   return (
-    <section className="themed-scrollbar flex h-full flex-col overflow-y-auto p-6 md:p-9">
+    <section className="flex min-h-full flex-col p-6 pb-12 md:p-9 md:pb-16">
       <motion.div
         className="w-full"
         key={topic.id}

@@ -61,7 +61,7 @@ export function DocsLayout({
           selectedTopic={selectedTopic}
           onSelectTopic={onSelectTopic}
         />
-        <main className="themed-scrollbar min-h-0 min-w-0 overflow-y-auto">{children}</main>
+        <main id="main-content" className="themed-scrollbar min-h-0 min-w-0 overflow-y-auto">{children}</main>
       </div>
     </DocsContainer>
   )

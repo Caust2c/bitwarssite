@@ -4,6 +4,7 @@ import * as React from "react"
 
 import { ContentViewer } from "@/components/layout/content-viewer"
 import { DocsLayout } from "@/components/layout/docs-layout"
+import { ContributorsPage } from "@/components/docs/contributors-page"
 import { defaultTopicId, topicCategories, topicsById } from "@/lib/hardware-topics"
 
 export function HardwarePage() {
@@ -78,12 +79,16 @@ export function HardwarePage() {
       searchResults={searchResults.slice(0, 12)}
       onOpenTopicFromSearch={openTopic}
     >
-      <ContentViewer
-        topic={selected}
-        previousTopic={previousTopic}
-        nextTopic={nextTopic}
-        onNavigate={openTopic}
-      />
+      {selectedTopic === "contributors" ? (
+        <ContributorsPage />
+      ) : (
+        <ContentViewer
+          topic={selected}
+          previousTopic={previousTopic}
+          nextTopic={nextTopic}
+          onNavigate={openTopic}
+        />
+      )}
     </DocsLayout>
   )
 }
