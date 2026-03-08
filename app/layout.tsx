@@ -12,14 +12,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TECH DECK",
+  title: "PC Hardware Glossary",
   description:
     "A modern documentation-style glossary for PC hardware terms.",
-  icons: {
-    icon: "/assets/OIP-removebg-preview.png",
-    shortcut: "/assets/OIP-removebg-preview.png",
-    apple: "/assets/OIP-removebg-preview.png",
-  },
 };
 
 export default function RootLayout({

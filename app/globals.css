@@ -156,7 +156,7 @@
   body {
     @apply bg-background font-mono text-foreground;
     overflow: hidden;
-    height: 100%;
+    height: 100dvh;
   }
 
   h1,
