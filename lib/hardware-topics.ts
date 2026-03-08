@@ -47,7 +47,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["cpu", "overview", "processor", "brain", "instructions"],
         images: [
           {
-            src: "/assets/Pasted image (1).png",
+            src: "/assets/CPU Architecture.png",
             alt: "CPU Architecture Diagram",
             caption: "Figure 1: Basic CPU architecture showing cores and cache hierarchy",
           },
@@ -80,9 +80,9 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["architecture", "core", "thread", "cache", "clock speed", "pipeline"],
         images: [
           {
-            src: "/assets/Pasted image (2).png",
-            alt: "CPU Architecture Diagram",
-            caption: "Figure 2: CPU instruction cycle and pipeline stages",
+            src: "/assets/CPU Hardware.jpg",
+            alt: "CPU Hardware",
+            caption: "Figure 2: CPU hardware diagram showing it's internal components",
           },
         ],
       },
@@ -237,7 +237,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["gpu", "overview", "parallelism", "graphics", "ai"],
         images: [
           {
-            src: "/assets/Pasted image (3).png",
+            src: "/assets/GPU Architecture.png",
             alt: "GPU Architecture Diagram",
             caption: "Figure 1: Basic GPU architecture showing streaming multiprocessors and memory hierarchy",
           },
@@ -267,14 +267,7 @@ export const topicCategories: TopicCategory[] = [
           "Tensor cores: specialized AI acceleration units for neural network math.",
           "Ray tracing cores: dedicated hardware for realistic lighting and reflections.",
         ],
-        keywords: ["architecture", "sm", "cuda cores", "vram", "tensor cores", "ray tracing"],
-        images: [
-          {
-            src: "/assets/Pasted image (4).png",
-            alt: "GPU Architecture Diagram",
-            caption: "Figure 2: Basic GPU memory management and hierarchy",
-          },
-        ],
+        keywords: ["architecture", "sm", "cuda cores", "vram", "tensor cores", "ray tracing"]
       },
       {
         id: "gpu-specifications",
@@ -419,7 +412,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["ram", "overview", "volatile", "temporary memory", "multitasking"],
         images: [
           {
-            src: "/assets/Pasted image (5).png",
+            src: "/assets/RAM Modules.png",
             alt: "RAM Modules",
             caption: "Figure 1: Various RAM modules of different capacities",
           },
@@ -447,14 +440,7 @@ export const topicCategories: TopicCategory[] = [
           "The memory controller, usually integrated into the CPU, manages communication between RAM and the processor.",
           "RAM modules are installed as DIMMs on motherboards, including UDIMM (desktop) and SO-DIMM (laptop) formats.",
         ],
-        keywords: ["architecture", "memory cells", "dual channel", "memory controller", "dimm"],
-        images: [
-          {
-            src: "/assets/Pasted image (6).png",
-            alt: "DRAM Cell Architecture",
-            caption: "Figure 2: Internal architecture of an 8F2 DRAM cell",
-          },
-        ],
+        keywords: ["architecture", "memory cells", "dual channel", "memory controller", "dimm"]
       },
       {
         id: "ram-specifications",
@@ -600,7 +586,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["motherboard", "overview", "mainboard", "bios", "uefi"],
         images: [
           {
-            src: "/assets/Pasted image (7).png",
+            src: "/assets/Motherboard Chip.png",
             alt: "Motherboard Chip",
             caption: "Figure 1: A typical motherboard chip",
           },
@@ -631,7 +617,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["architecture", "chipset", "socket", "dimm", "pcie"],
         images: [
           {
-            src: "/assets/Pasted image (8).png",
+            src: "/assets/Motherboard Architecture.jpg",
             alt: "Motherboard Components",
             caption: "Figure 2: An image showing internal motherboard components",
           },
@@ -775,9 +761,9 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["storage", "overview", "ssd", "hdd", "permanent data"],
         images: [
           {
-            src: "/assets/Pasted image (9).png",
-            alt: "Memory Heirarchy",
-            caption: "Figure 1: The computer memory heirarchy diagram",
+            src: "/assets/Memory Hierarchy.jpg",
+            alt: "Memory Hierarchy",
+            caption: "Figure 1: The computer memory hierarchy diagram",
           },
         ],
       },
@@ -804,7 +790,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["architecture", "hdd", "ssd", "nand", "nvme"],
         images: [
           {
-            src: "/assets/Pasted image (10).png",
+            src: "/assets/Hard Drive.png",
             alt: "Hard Drive",
             caption: "Figure 2: Internal components of a typical hard drive",
           },
@@ -947,7 +933,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["networking", "overview", "ethernet", "wifi", "nic"],
         images: [
           {
-            src: "/assets/Pasted image (11).png",
+            src: "/assets/Network Topology.jpg",
             alt: "Network Topologies",
             caption: "Figure 1: A diagram showing various network topologies",
           },
@@ -976,7 +962,7 @@ export const topicCategories: TopicCategory[] = [
         keywords: ["architecture", "osi", "tcp/ip", "nic", "mac address"],
         images: [
           {
-            src: "/assets/Pasted image (12).png",
+            src: "/assets/OSI Model.jpg",
             alt: "OSI Model",
             caption: "Figure 2: A diagram showing the various layers of the OSI model",
           },

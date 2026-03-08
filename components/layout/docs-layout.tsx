@@ -34,7 +34,7 @@ export function DocsLayout({
         <div className="flex flex-wrap items-center gap-3">
           <div className="mr-3 flex shrink-0 items-center gap-3 px-0.5 py-0.5">
             <Image
-              src="/assets/OIP-removebg-preview.png"
+              src="/assets/Logo.png"
               alt="Tech Deck logo"
               width={34}
               height={34}
