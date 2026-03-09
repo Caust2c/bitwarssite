@@ -1,7 +1,8 @@
 "use client"
 
 import * as React from "react"
-import { MessageSquare, Send, X, Loader2 } from "lucide-react"
+import Image from "next/image"
+import { Send, X, Loader2 } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
@@ -9,6 +10,8 @@ type Message = {
   role: "user" | "assistant"
   content: string
 }
+
+const ROBOT_ICON_SRC = "/assets/1492719128-robot_83633.svg"
 
 export function ChatWidget() {
   const [isOpen, setIsOpen] = React.useState(false)
@@ -86,7 +89,7 @@ export function ChatWidget() {
           className="fixed right-5 bottom-5 z-[100] flex h-14 w-14 items-center justify-center rounded-full border border-border/60 bg-accent/90 text-background shadow-lg transition-all duration-300 hover:scale-105 hover:bg-accent"
           aria-label="Open chat"
         >
-          <MessageSquare className="h-6 w-6" />
+          <Image src={ROBOT_ICON_SRC} alt="Chatbot" width={24} height={24} className="h-6 w-6" />
         </button>
       )}
 
@@ -96,7 +99,7 @@ export function ChatWidget() {
           {/* Header */}
           <div className="flex shrink-0 items-center justify-between border-b border-border/60 bg-accent/12 px-4 py-3">
             <div className="flex items-center gap-2">
-              <MessageSquare className="h-5 w-5 text-accent" />
+              <Image src={ROBOT_ICON_SRC} alt="Chatbot" width={20} height={20} className="h-5 w-5" />
               <span className="font-semibold tracking-wide">Build Advisor</span>
             </div>
             <button
@@ -113,7 +116,7 @@ export function ChatWidget() {
           <div className="themed-scrollbar flex-1 space-y-3 overflow-y-auto p-4">
             {messages.length === 0 && (
               <div className="flex h-full flex-col items-center justify-center text-center text-muted-foreground">
-                <MessageSquare className="mb-3 h-10 w-10 opacity-40" />
+                <Image src={ROBOT_ICON_SRC} alt="Chatbot" width={40} height={40} className="mb-3 h-10 w-10 opacity-40" />
                 <p className="text-sm">Hi! I&apos;m your PC Build Advisor.</p>
                 <p className="mt-1 text-xs opacity-70">
                   Tell me your budget and what you want to do, and I&apos;ll help you pick components.
